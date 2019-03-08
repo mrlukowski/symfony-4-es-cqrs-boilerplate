@@ -12,9 +12,6 @@ use Broadway\ReadModel\Projector;
 
 class UserReadProjectionFactory extends Projector
 {
-    /**
-     * @throws \Assert\AssertionFailedException
-     */
     protected function applyUserWasCreated(UserWasCreated $userWasCreated): void
     {
         $userReadModel = UserView::fromSerializable($userWasCreated);
