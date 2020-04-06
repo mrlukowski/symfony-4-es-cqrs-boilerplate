@@ -109,7 +109,7 @@ class ExceptionSubscriber implements EventSubscriberInterface
 
     public function __construct()
     {
-        $this->environment = (string) getenv('APP_ENV') ?? 'dev';
+        $this->environment = (string) (getenv('APP_ENV') ?? 'dev');
     }
 
     /** @var string */
